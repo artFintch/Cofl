@@ -30,7 +30,7 @@ do {
     exit(EX_USAGE)
 }
 
-let filePathOutput = "File path: "
+let filePathOutput = "File path:"
 var separatorString = ""
 for _ in 0...(projectPath.value!.characters.count + filePathOutput.characters.count) {
     separatorString += "-"
