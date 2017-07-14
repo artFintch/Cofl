@@ -4,7 +4,7 @@ It's a tiny utility for managing compile flags of source files in Xcode project.
 ## Installation
 Need to add library [XcodeEditor](https://github.com/appsquickly/XcodeEditor) in Target Dependencies of Xcode Project.
 
-### Usage:
+#### Usage:
 ```
 Usage: cofl [options]
   -p, --project:
@@ -17,7 +17,7 @@ Usage: cofl [options]
       Prints a help message.
 ```
 
-### Example:
+#### Example:
 ```bash
 cofl -p MyGameProject.xcodeproj \
 -f fvisibility=default \
