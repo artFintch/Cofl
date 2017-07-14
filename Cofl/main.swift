@@ -23,22 +23,19 @@ do {
     let arguments = Swift.CommandLine.arguments
     if arguments.contains("-help") || arguments.contains("-h") {
         commandLine.printUsage()
-    }
-    else {
+    } else {
         commandLine.printUsage(error)
     }
     exit(EX_USAGE)
 }
 
 let filePathOutput = "File path:"
-var separatorString = ""
-for _ in 0...(projectPath.value!.characters.count + filePathOutput.characters.count) {
-    separatorString += "-"
-}
+var separatorString = String(repeating: "-",
+                             count: projectPath.value!.characters.count + filePathOutput.characters.count + 1)
 
 print(separatorString)
 
-// All required options are not equal nil
+// ! All required options are not equal nil
 print(filePathOutput, projectPath.value!)
 
 print("Compiler flags:")
@@ -57,13 +54,13 @@ guard let project = XCProject(filePath: projectPath.value!) else {
     exit(EX_NOINPUT)
 }
 
-var projectWasChanged: Bool = false
+var projectWasChanged = false
 var compilerFlagsInLine = ""
 for compilerFlag in compilerFlags.value! {
     if !compilerFlagsInLine.isEmpty {
         compilerFlagsInLine += " "
     }
-    compilerFlagsInLine += "-" + compilerFlag
+    compilerFlagsInLine += "-\(compilerFlag)"
 }
 
 for sourceFile in sourceFiles.value! {
