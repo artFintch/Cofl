@@ -1,4 +1,10 @@
-# Compile flags (cofl)
+Compile flags (cofl)
+===================
+
+[![Swift Version](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://developer.apple.com/swift)
+[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://www.apple.com/ru/ios)
+[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/artFintch/VideoMerger/blob/master/LICENSE)
+
 It's a tiny utility for managing compile flags of source files in Xcode project. Can be helpful when you need to generate Xcode Project (e.g. with [qmake](http://doc.qt.io/qt-5/qmake-manual.html)).
 
 ## Installation
